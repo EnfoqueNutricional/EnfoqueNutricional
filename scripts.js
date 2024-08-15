@@ -18,3 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const middleContainer = document.querySelector('.middle-container');
+    const navContainer = document.querySelector('.nav-container');
+
+    menuToggle.addEventListener('click', function () {
+        middleContainer.classList.toggle('active');
+        navContainer.classList.toggle('active');
+    });
+});
