@@ -15,9 +15,8 @@ header {
   transition: 0.75s;
   padding: 20px;
   z-index: 10;
-  font-weight: bold;
-  font-size: 13px;
-  background: transparent; /* Añadido para el header por defecto */
+  font-size: 8px;
+  
 }
 
 .header-block {
@@ -29,8 +28,9 @@ header {
   margin: 0;
   padding: 0;
   gap: 20px;
-  font-weight: bold;
+  font-size: 8px;
 }
+
 
 .header-block.nav-container {
   display: flex;
@@ -139,72 +139,87 @@ header.abajo .header-block {
   }
 }
 
-/* Estilos del banner y slider */
-.banner {
+
+
+
+
+.video-section {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white; /* Letras blancas */
-  font-family: "Oswald", Sans-serif;
+  height: auto; /* Permite que la altura se ajuste automáticamente */
 }
 
-.btn-outline-custom {
-  border-color: white; /* Color del borde */
-  color: white; /* Color del texto */
-  font-size: 18px; /* Tamaño del texto */
-  width: 200px; /* Ancho del botón */
-}
-
-.btn-outline-custom:hover {
-  background-color: #66A272; /* Color de fondo al pasar el cursor */
-  color: white; /* Color del texto al pasar el cursor */
-  border-color: white; /* Color del borde al pasar el cursor */
-}
-
-.banner-container {
+.video-container {
   position: relative;
   width: 100%;
-  height: 400px; /* Ajusta la altura del banner según tus necesidades */
+  height: 100vh; /* Hace que el contenedor del video ocupe toda la altura de la ventana */
   overflow: hidden;
 }
 
-.banner-video {
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra todo el contenedor sin distorsión */
+}
+
+.video-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que el video cubra completamente el contenedor */
-  z-index: -1; /* Coloca el video detrás del contenido */
+  display: flex; /* Utiliza flexbox para centrar el contenido */
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Alinea el texto al centro */
+  color: white;
+  z-index: 2; /* Asegura que el overlay esté por encima del video */
+  padding: 0 20px; /* Añade padding horizontal para mantener espacio en los bordes */
 }
 
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centra el contenido tanto horizontal como verticalmente */
-  color: white; /* Ajusta el color del texto según sea necesario */
-  text-align: center;
-  z-index: 1; /* Asegura que el texto esté delante del video */
-}
-
-.banner-content h1 {
-  font-size: 48px; /* Ajusta el tamaño del texto según sea necesario */
+.video-overlay h1 {
   margin: 0;
+  padding: 0;
+  font-family: "Oswald", Sans-serif;
+  font-size: 8vw; /* Tamaño de fuente adaptativo al ancho de la pantalla */
+  justify-content: center;
 }
 
-.banner-content p {
-  font-size: 24px;
+.video-overlay p {
   margin: 10px 0 0;
+  padding: 0;
+  font-family: "Oswald", Sans-serif;
+  font-size: 4vw; /* Tamaño de fuente adaptativo al ancho de la pantalla */
 }
+
+@media (min-width: 768px) {
+  .video-overlay h1 {
+    font-size: 5vw; /* Ajuste para pantallas medianas */
+  }
+
+  .video-overlay p {
+    font-size: 2.5vw; /* Ajuste para pantallas medianas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-overlay h1 {
+    font-size: 3vw; /* Ajuste para pantallas grandes */
+  }
+
+  .video-overlay p {
+    font-size: 1.5vw; /* Ajuste para pantallas grandes */
+  }
+}
+
+
+
+
+
+
+
+
 
 /* SLIDER */
 .slider-frame {
@@ -384,5 +399,24 @@ header.abajo .header-block {
 @media (max-width: 767px) {
   .social-icons {
       text-align: center;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .video-overlay h1,
+  .video-overlay p {
+    font-size: 4vw; /* Ajuste para pantallas medianas */
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-overlay h1 {
+    font-size: 3vw; /* Ajuste para pantallas grandes */
+  }
+  
+  .video-overlay p {
+    font-size: 2vw; /* Ajuste para pantallas grandes */
   }
 }
