@@ -57,7 +57,7 @@ header {
 
 /* Estado cuando el header está abajo */
 header.abajo {
-  background-color: #66A272; /* Mantén este color de fondo */
+  background-color: rgba(100, 107, 99, 0.8); /* Color de fondo con 80% de opacidad */
   padding: 15px 20px;
 }
 
@@ -108,99 +108,47 @@ header ul li a {
 
 
 
-/* Estilos para el menú hamburguesa en pantallas pequeñas */
-@media (max-width: 300px) {
-  .middle-container,
-  .nav-container {
-    display: none; /* Oculto por defecto */
-    flex-direction: column; /* Cambia la dirección para mostrar el menú hacia abajo */
-    align-items: center; /* Centra los ítems horizontalmente */
-    position: absolute; /* Posiciona el menú debajo del header */
-    top: 2px; /* Ajusta según el alto del header */
-    left: 0;
-    width: 100%;
-    padding: 20px 0;
-    z-index: 20; /* Asegúrate de que esté encima del contenido */
-  }
-
-  .menu-toggle {
-      display: block; /* Muestra el botón de menú hamburguesa */
-  }
-
-  .header-block {
-      flex-direction: column; /* Cambia la dirección del flex para el menú en móviles */
-      align-items: center;
-  }
-
-  .middle-container.active,
-  .nav-container.active {
-      display: flex; /* Muestra el menú cuando se activa */
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .nav-container ul {
-      display: flex; /* Asegúrate de que los íconos de redes sociales se muestren en línea */
-      gap: -5px; /* Ajusta el espacio entre los íconos */
-  }
-}
 
 
 
 
 
 
-
-
-.video-section {
+.video {
   position: relative;
   width: 100%;
-  height: auto; /* Permite que la altura se ajuste automáticamente */
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Hace que el contenedor del video ocupe toda la altura de la ventana */
+  height: 720px;
   overflow: hidden;
 }
 
-video {
+.video video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Asegura que el video cubra todo el contenedor sin distorsión */
+  object-fit: cover;
 }
 
 .video-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex; /* Utiliza flexbox para centrar el contenido */
-  flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
-  align-items: center; /* Centra el contenido horizontalmente */
-  text-align: center; /* Alinea el texto al centro */
-  color: white;
-  z-index: 2; /* Asegura que el overlay esté por encima del video */
-  padding: 0 20px; /* Añade padding horizontal para mantener espacio en los bordes */
+  bottom: 150px; /* Ajusta este valor para subir o bajar el texto desde el borde inferior */
+  right: 20px; /* Mantén este valor para la posición horizontal */
+  color: white; /* Cambia el color del texto según sea necesario */
+  z-index: 1; /* Asegura que el texto esté sobre el video */
+  text-align: right; /* Alinea el texto a la derecha */
+  font-family: "Oswald", Sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .video-overlay h1 {
-  margin: 0;
-  padding: 0;
-  font-family: "Oswald", Sans-serif;
-  font-size: 8vw; /* Tamaño de fuente adaptativo al ancho de la pantalla */
-  justify-content: center;
+  font-size: 100px; /* Tamaño de fuente del h1 */
+  margin: 0; /* Elimina el margen predeterminado */
 }
 
-.video-overlay p {
-  margin: 10px 0 0;
-  padding: 0;
-  font-family: "Oswald", Sans-serif;
-  font-size: 4vw; /* Tamaño de fuente adaptativo al ancho de la pantalla */
-}
+
+
+
+
+
 
 @media (min-width: 768px) {
   .video-overlay h1 {
@@ -224,28 +172,30 @@ video {
 
 
 
+/* Ajusta el ancho y altura del contenedor del slider */
+.swiper-container {
+  width: 100%; /* Ajusta el ancho del contenedor al 100% del contenedor padre */
+  height: auto; /* Ajusta la altura según el contenido */
+  overflow: hidden; /* Evita el desbordamiento del contenido */
+  cursor: url('images/cursor.png'), auto;
+}
 
-
-/* Aumentar el tamaño de las imágenes dentro de los slides */
+/* Ajusta el estilo de las imágenes dentro de los slides */
 .swiper-slide img {
-  width: 160%; /* Aumenta el ancho de la imagen al 120% del contenedor */
+  width: 120%; /* Aumenta el ancho de la imagen al 120% del slide */
   height: auto; /* Mantiene la proporción de la imagen */
   object-fit: cover; /* Asegura que la imagen cubra el área del slide sin distorsionarse */
   margin-left: -10%; /* Ajusta la posición horizontal para centrar la imagen */
 }
-.swiper-container {
-  width: 160%; /* Ajusta el ancho del contenedor según tus necesidades */
-  margin-left: -12%; /* Ajusta el valor para mover el slider más a la izquierda */
-  height: 650%;
-  cursor: url('images/cursor.png'), auto;
+
+/* Alinea el contenido dentro de los slides */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que las imágenes ocupen toda la altura del slide */
 }
 
-.swiper-slide {
-   display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Asegura que las imágenes ocupen toda la altura del slide */
-}
 
 
 
