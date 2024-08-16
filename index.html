@@ -11,36 +11,45 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> <!-- Verifica la ruta -->
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body style="background-color: #f0ebd7;">
 
     <header>
-        <div class="header-block logo-container">
-            <a href="#" class="logo">LOGOOO</a>
-        </div>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i> <!-- Icono de menú hamburguesa -->
-        </button>
-        <div class="header-block middle-container">
-            <ul>
-                <li><a href="#">INICIO</a></li>
-                <li><a href="#">SOBRE MI</a></li>
-            </ul>
-        </div>
-        <nav class="header-block nav-container">
-            <ul>
-                <li><a href="https://wa.me/tu_numero" target="_blank" aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
-                </a></li>
-                <li><a href="https://www.instagram.com/tu_perfil" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"style="font-size: 20px;"></i>
-                </a></li>
-                <li><a href="https://www.tiktok.com/@tu_usuario" target="_blank" aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok" style="font-size: 20px;"></i>
-                </a></li>
-            </ul>
+        <nav class="header-nav">
+            <div class="header-block col-4">
+                <div class="logo-container">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" alt="Logo" class="logo-image"> <!-- Imagen del logo -->
+                    </a>
+                </div>
+            </div>
+            <button class="menu-toggle col-4" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i> <!-- Icono de menú hamburguesa -->
+            </button>
+            <div class="header-block col-4 middle-container">
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">SOBRE MI</a></li>
+                </ul>
+            </div>
+            <div class="header-block col-4 nav-container">
+                <ul>
+                    <li><a href="https://wa.me/tu_numero" target="_blank" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i>
+                    </a></li>
+                    <li><a href="https://www.instagram.com/tu_perfil" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" style="font-size: 20px;"></i>
+                    </a></li>
+                    <li><a href="https://www.tiktok.com/@tu_usuario" target="_blank" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok" style="font-size: 20px;"></i>
+                    </a></li>
+                </ul>
+            </div>
         </nav>
-    </header>
+        
+    </header>   
     
     <section>
         <div class="video">
@@ -54,11 +63,13 @@
         </div>
     </section>
     <br>
+    <br>
+    <br>
     
     <section >
-        <div class="container">
+        <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="col-12">
+                <div class="col-12 mt-3">
                     <h1 class="mt-5" style="font-size: 48px; font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700;">
                         Una alimentación saludable
                     </h1>
@@ -68,27 +79,20 @@
                 </div>
             </div>
         </div>
-     <div class="container mt-5">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="slider-frame">
-                        <ul id="slider">
-                            <li><img src="images/slider/slider1.jpg" alt="Slider Image 1"></li>
-                            <li><img src="images/slider/slider2.jpg" alt="Slider Image 2"></li>
-                            <li><img src="images/slider/slider3.jpg" alt="Slider Image 3"></li>
-                            <li><img src="images/slider/slider4.jpg" alt="Slider Image 4"></li>
-                        </ul>
-                    </div>
-                    <button id="prev" class="slider-control">‹</button>
-                    <button id="next" class="slider-control">›</button>
-                </div>
+
+        <div class="swiper-container mt-4">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="images/slider/slider1.jpg" alt="Slide 1"></div>
+              <div class="swiper-slide"><img src="images/slider/slider2.jpg" alt="Slide 2"></div>
+              <div class="swiper-slide"><img src="images/slider/slider3.jpg" alt="Slide 3"></div>
+              <div class="swiper-slide"><img src="images/slider/slider3.jpg" alt="Slide 3"></div>
+
             </div>
+            <!-- Agregar paginación y navegación si es necesario -->
         </div>
+
+    
     </section>
-
-
-
-
 
 
 
@@ -156,6 +160,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
     
