@@ -11,7 +11,7 @@ header {
   left: 0;
   width: 100%;
   transition: padding 0.75s, background-color 0.75s;
-  padding: 30px;
+  padding: 9px;
   z-index: 10;
   font-size: 8px;
 }
@@ -58,7 +58,7 @@ header {
 /* Estado cuando el header está abajo */
 header.abajo {
   background-color: rgba(100, 107, 99, 0.8); /* Color de fondo con 80% de opacidad */
-  padding: 15px 20px;
+  padding: 1px 20px;
 }
 
 /* No cambiar el color del texto al hacer scroll */
@@ -74,7 +74,7 @@ header ul {
   justify-content: center;
   align-items: center;
   gap: 10px; /* Ajusta el espacio entre los elementos de la lista */
-  font-size: 18px;
+  font-size: 12px;
 }
 
 header ul li {
@@ -85,10 +85,10 @@ header ul li a {
   font-family: helvetica;
   text-decoration: none;
   color: #fff; /* Mantener el color blanco */
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-weight: 600;
   transition: color 0.7s;
-  font-size: 18px;
+  font-size: 13px;
 }
 
 /* Botón de menú */
@@ -270,7 +270,7 @@ header ul li a {
 .video {
   position: relative;
   width: 100%;
-  height: 810px;
+  height: 790px;
   overflow: hidden;
 }
 
@@ -282,9 +282,9 @@ header ul li a {
 
 .video-overlay {
   position: absolute;
-  bottom: 70px; /* Ajusta este valor para subir o bajar el texto desde el borde inferior */
+  bottom: 190px; /* Ajusta este valor para subir o bajar el texto desde el borde inferior */
   right: 20px; /* Mantén este valor para la posición horizontal */
-  color: white; /* Cambia el color del texto según sea necesario */
+  color: #f0ebd7; /* Cambia el color del texto según sea necesario */
   z-index: 1; /* Asegura que el texto esté sobre el video */
   text-align: right; /* Alinea el texto a la derecha */
   font-family: "Oswald", Sans-serif;
@@ -293,7 +293,7 @@ header ul li a {
 }
 
 .video-overlay h1 {
-  font-size: 100px; /* Tamaño de fuente del h1 */
+  font-size: 95px; /* Tamaño de fuente del h1 */
   margin: 0; /* Elimina el margen predeterminado */
 }
 
