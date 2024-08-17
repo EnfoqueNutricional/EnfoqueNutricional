@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet">
+
 </head>
 <body style="background-color: #f0ebd7;">
 
@@ -36,14 +38,14 @@
                 <i class="fa-solid fa-bars"></i> <!-- Icono de menú hamburguesa -->
             </button>
             <div class="header-block col-4 middle-container">
-                <ul>
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="#">SOBRE MI</a></li>
+                 <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre mi</a></li>
                 </ul>
             </div>
             <div class="header-block col-4 nav-container">
                 <ul>
-                    <button type="button" class="custom-btn">Menu</button>
+                    <button type="button" class="custom-btn" data-mdb-toggle="modal" data-mdb-target="#staticBackdrop5">Reservar</button>
 
                     <li><a href="https://www.instagram.com/enfoqnut.pe/" target="_blank" aria-label="Instagram">
                         <i class="fa-brands fa-instagram" style="font-size: 20px;"></i>
@@ -131,7 +133,37 @@
             </div>
         </div>
     </section>
+
+
+
+
     
+    
+
+<!-- Modal -->
+<div class="modal top fade" id="staticBackdrop5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
+    <div class="modal-dialog modal-dialog-centered text-center d-flex justify-content-center">
+        <div class="modal-content w-75">
+            <div class="modal-body p-4">
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.webp" alt="avatar" class="rounded-circle position-absolute top-0 start-50 translate-middle h-50" />
+                <form id="consultaForm">
+                    <div>
+                        <h5 class="pt-5 my-3">Hola, escribe aquí tu consulta</h5>
+
+                        <div class="form-outline mb-4">
+                            <input type="text" id="consulta" class="form-control" placeholder="Escribe tu consulta aquí"/>
+                            <label class="form-label" for="consulta">Consulta</label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
     
     
     
@@ -204,6 +236,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+
 
 
     

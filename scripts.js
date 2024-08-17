@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       initialSlide: 0,
       autoplay: {
-        delay: 3000, // Tiempo en milisegundos entre cada cambio de slide
+        delay: 4000, // Tiempo en milisegundos entre cada cambio de slide
         disableOnInteraction: false, // Continuar la reproducción automática después de la interacción del usuario
       },
     });
@@ -77,4 +77,23 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
 
+document.getElementById('consultaForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Obtener la consulta ingresada
+    var consulta = document.getElementById('consulta').value.trim();
+    
+    // Asegúrate de reemplazar el número de teléfono con tu número de WhatsApp
+    var telefono = '51920580635'; // Reemplaza con tu número en formato internacional
+    
+    if (consulta) {
+        // Construir la URL de WhatsApp Web
+        var url = 'https://web.whatsapp.com/send?phone=' + telefono + '&text=' + encodeURIComponent(consulta);
+        
+        // Redirigir a la URL de WhatsApp Web
+        window.open(url, '_blank');
+    } else {
+        alert('Por favor, escribe tu consulta.');
+    }
+});
 
