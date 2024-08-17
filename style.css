@@ -98,11 +98,164 @@ header ul li a {
   border: none;
   color: #fff;
   cursor: pointer;
+  font-size: 20px;
   z-index: 20; /* Asegúrate de que esté encima del menú */
 }
 
 
 
+@media (max-width: 768px) {
+  /* Oculta el menú de navegación por defecto en dispositivos móviles */
+  .header-nav ul {
+    display: none; /* Oculta el menú de navegación en dispositivos móviles */
+  }
+  .header-nav.active .middle-container,
+  .header-nav.active .nav-container {
+    display: flex; /* Muestra los bloques del menú cuando está activo */
+    flex-direction: row; /* Apila verticalmente los elementos del menú */
+    width: 100%; /* Asegura que el menú ocupe todo el ancho */
+    position: absolute; 
+    left: 0; /* Alinea el menú al borde izquierdo */
+    z-index: 20; /* Asegura que el menú esté encima de otros elementos */
+  }
+
+  /* Muestra el menú cuando el contenedor tiene la clase 'active' */
+  .header-nav.active ul {
+    display: flex; /* Muestra el menú de navegación cuando está activo */
+    flex-direction: row; /* Alinea los elementos horizontalmente */
+  }
+
+  /* Muestra el botón de menú hamburguesa en dispositivos móviles */
+  .menu-toggle {
+    display: block; /* Muestra el botón de menú hamburguesa */
+    position: absolute; /* Posiciona el botón sobre el header */
+    top: 15px; /* Ajusta la posición del botón */
+    right: 15px; /* Alinea el botón al borde derecho del header */
+    z-index: 25; /* Asegura que el botón esté encima de otros elementos */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor tipo puntero */
+    padding: 10px; /* Espaciado alrededor del botón */
+  }
+
+  /* Ajusta el tamaño del logo en dispositivos móviles */
+  .logo-container .logo-image {
+    max-width: 100px; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+  }
+
+  /* Ajusta el estilo del bloque central en dispositivos móviles */
+  .header-block.middle-container {
+    flex: 1; /* Ajusta el tamaño del bloque central si es necesario */
+    padding: 10px; /* Añade padding para espaciado */
+    text-align: center; /* Centra el texto dentro del bloque */
+    max-width: 90%; /* Ajusta el ancho máximo del bloque */
+    margin: 0 auto; /* Centra el bloque dentro del contenedor */
+  }
+
+  /* Opcional: Ajusta el estilo del bloque de íconos de redes sociales en dispositivos móviles */
+  .header-block.nav-container {
+    flex: 1; /* Ajusta el tamaño del bloque de íconos si es necesario */
+    padding: 10px; /* Añade padding para espaciado */
+    text-align: center; /* Centra el texto dentro del bloque */
+    max-width: 90%; /* Ajusta el ancho máximo del bloque */
+    margin: 0 auto; /* Centra el bloque dentro del contenedor */
+  }
+}
+
+
+
+
+
+
+/* Estilo general */
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.mb-5 {
+  margin-bottom: 3rem; /* Ajusta el margen inferior según sea necesario */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.responsive-image {
+  width: 100%;
+  max-width: 400px; /* Ajusta el ancho máximo de la imagen según sea necesario */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.responsive-heading {
+  font-size: 38px;
+  font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.responsive-paragraph {
+  font-size: 18px;
+  font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .responsive-heading {
+      font-size: 32px; /* Ajusta el tamaño de la fuente del título en pantallas más pequeñas */
+  }
+
+  .responsive-paragraph {
+      font-size: 16px; /* Ajusta el tamaño de la fuente del párrafo en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-heading {
+      font-size: 28px; /* Ajusta el tamaño de la fuente del título en pantallas muy pequeñas */
+  }
+
+  .responsive-paragraph {
+      font-size: 14px; /* Ajusta el tamaño de la fuente del párrafo en pantallas muy pequeñas */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Ajusta el ancho y altura del contenedor del slider */
+.swiper-container {
+  width: 100%; /* Ajusta el ancho del contenedor al 100% del contenedor padre */
+  height: auto; /* Ajusta la altura según el contenido */
+  overflow: hidden; /* Evita el desbordamiento del contenido */
+  cursor: url('images/cursor.png'), auto;
+}
+
+/* Ajusta el estilo de las imágenes dentro de los slides */
+.swiper-slide img {
+  width: 120%; /* Aumenta el ancho de la imagen al 120% del slide */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el área del slide sin distorsionarse */
+  margin-left: -10%; /* Ajusta la posición horizontal para centrar la imagen */
+}
+
+/* Alinea el contenido dentro de los slides */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que las imágenes ocupen toda la altura del slide */
+}
 
 
 
@@ -129,7 +282,7 @@ header ul li a {
 
 .video-overlay {
   position: absolute;
-  bottom: 150px; /* Ajusta este valor para subir o bajar el texto desde el borde inferior */
+  bottom: 70px; /* Ajusta este valor para subir o bajar el texto desde el borde inferior */
   right: 20px; /* Mantén este valor para la posición horizontal */
   color: white; /* Cambia el color del texto según sea necesario */
   z-index: 1; /* Asegura que el texto esté sobre el video */
@@ -172,29 +325,89 @@ header ul li a {
 
 
 
-/* Ajusta el ancho y altura del contenedor del slider */
-.swiper-container {
-  width: 100%; /* Ajusta el ancho del contenedor al 100% del contenedor padre */
-  height: auto; /* Ajusta la altura según el contenido */
-  overflow: hidden; /* Evita el desbordamiento del contenido */
-  cursor: url('images/cursor.png'), auto;
-}
 
-/* Ajusta el estilo de las imágenes dentro de los slides */
-.swiper-slide img {
-  width: 120%; /* Aumenta el ancho de la imagen al 120% del slide */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover; /* Asegura que la imagen cubra el área del slide sin distorsionarse */
-  margin-left: -10%; /* Ajusta la posición horizontal para centrar la imagen */
-}
 
-/* Alinea el contenido dentro de los slides */
-.swiper-slide {
+
+
+
+/* Estilo general */
+.parallax-section {
+  background-image: url('images/banner2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px; /* Ajusta la altura según sea necesario */
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; /* Asegura que las imágenes ocupen toda la altura del slide */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
 }
+
+.parallax-content {
+  position: relative;
+  text-align: center; /* Asegura que el texto dentro de las columnas esté centrado */
+  color: white;
+  padding: 20px;
+  max-width: 100%; /* Asegura que el contenido no sobrepase el ancho de la imagen */
+}
+
+.container {
+  max-width: 1200px; /* Ajusta el ancho máximo del contenedor según sea necesario */
+  width: 100%;
+}
+
+.row {
+  margin: 0;
+}
+
+.col-4 {
+  padding: 15px; /* Ajusta el padding según sea necesario */
+}
+
+h1, p {
+  margin: 0;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .parallax-section {
+    height: 300px; /* Ajusta la altura según sea necesario para pantallas más pequeñas */
+  }
+
+  .parallax-content {
+    padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+  }
+
+  h1 {
+    font-size: 24px; /* Ajusta el tamaño de la fuente del título en pantallas más pequeñas */
+  }
+
+  p {
+    font-size: 16px; /* Ajusta el tamaño de la fuente del párrafo en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-section {
+    height: 200px; /* Ajusta la altura según sea necesario para pantallas más pequeñas */
+  }
+
+  .parallax-content {
+    padding: 5px; /* Reduce aún más el padding en pantallas muy pequeñas */
+  }
+
+  h1 {
+    font-size: 20px; /* Ajusta el tamaño de la fuente del título en pantallas muy pequeñas */
+  }
+
+  p {
+    font-size: 14px; /* Ajusta el tamaño de la fuente del párrafo en pantallas muy pequeñas */
+  }
+}
+
+
+
 
 
 
@@ -368,4 +581,42 @@ header ul li a {
   .video-overlay p {
     font-size: 2vw; /* Ajuste para pantallas grandes */
   }
+}
+
+
+
+
+
+
+
+
+
+.d-flex {
+  width: 100%;
+}
+
+.text-center h1, .text-center p {
+  margin: 0;
+}
+
+
+
+
+
+
+.parallax-section {
+  background-image: url('images/banner2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px; /* Ajusta la altura según sea necesario */
+  width: 100%;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+  padding: 20px; /* Ajusta el padding según sea necesario */
+  color: white; /* Asegura que el texto sea visible sobre el fondo */
 }

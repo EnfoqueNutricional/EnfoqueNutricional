@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       initialSlide: 0,
       autoplay: {
-        delay: 3500, // Tiempo en milisegundos entre cada cambio de slide
+        delay: 3000, // Tiempo en milisegundos entre cada cambio de slide
         disableOnInteraction: false, // Continuar la reproducción automática después de la interacción del usuario
       },
     });
@@ -50,23 +50,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-  
 
 
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+
+
+  document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
-    const middleContainer = document.querySelector('.middle-container');
-    const navContainer = document.querySelector('.nav-container');
-
-    menuToggle.addEventListener('click', function () {
-        middleContainer.classList.toggle('active');
-        navContainer.classList.toggle('active');
-    });
-});
-
+    const headerNav = document.querySelector('.header-nav');
+  
+    if (menuToggle && headerNav) {
+      menuToggle.addEventListener('click', function () {
+        headerNav.classList.toggle('active');
+      });
+    } else {
+      console.error('Elementos no encontrados');
+    }
+  });
+  
 
 
 
