@@ -80,7 +80,7 @@ header {
 }
 
 .logo-container .logo-image {
-  max-width: 45%; /* Ajusta el tamaño máximo del logo a 70px */
+  max-width: 55%; /* Ajusta el tamaño máximo del logo a 70px */
   height: auto; /* Mantiene la proporción de la imagen */
   vertical-align: middle; /* Alinea verticalmente con el texto */
 }
@@ -120,13 +120,11 @@ header ul li {
 }
 
 header ul li a {
-  font-family: helvetica;
   text-decoration: none;
   color: #f0ebd7; /* Mantener el color blanco */
   letter-spacing: 1px;
-  font-weight: 600;
   transition: color 0.7s;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 /* Botón de menú */
@@ -270,7 +268,7 @@ header ul li a {
 
 
 
-
+/* esto esta comentado */
 /* Ajusta el ancho y altura del contenedor del slider */
 .swiper-container {
   width: 100%; /* Ajusta el ancho del contenedor al 100% del contenedor padre */
@@ -292,10 +290,8 @@ header ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Asegura que las imágenes ocupen toda la altura del slide */
+  height: 120%; /* Asegura que las imágenes ocupen toda la altura del slide */
 }
-
-
 
 
 
@@ -317,35 +313,73 @@ header ul li a {
   height: 100%;
   object-fit: cover;
 }
+#display-time {
+  position: absolute; /* Posiciona el elemento de manera absoluta dentro del contenedor padre */
+  bottom: 80px; /* Ajusta la distancia desde el borde inferior del contenedor */
+  left: 20px; /* Ajusta la distancia desde el borde izquierdo del contenedor */
+  color: white; /* Asegúrate de que el texto sea visible sobre el video */
+  font-size: 24px; /* Ajusta el tamaño del texto según sea necesario */
+}
 
+.text-overlay {
+  position: absolute;
+  top: 50%; /* Posición vertical centrada */
+  left: 50%; /* Posición horizontal centrada */
+  transform: translate(-50%, -50%); /* Centramos el contenedor de texto */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  width: 100%; /* Asegura que el contenedor de texto ocupe todo el ancho */
+  height: auto; /* Ajusta la altura del contenedor según el contenido */
+}
 
+#another-text {
+  color: white;
+  font-size: 40px; /* Tamaño de la fuente */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  opacity: 1; /* Inicialmente visible */
+  animation: fadeOut 1s forwards; /* Aplicar animación de desvanecimiento */
+  animation-delay: 1s; /* Espera 1 segundo antes de iniciar la animación */
+  margin: 0; /* Elimina márgenes para evitar espacios adicionales */
+}
 
-
-
-
-
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
 
 @media (min-width: 768px) {
-  .video-overlay h1 {
-    font-size: 5vw; /* Ajuste para pantallas medianas */
+  #display-time {
+      font-size: 5vw; /* Ajuste para pantallas medianas */
   }
 
-  .video-overlay p {
-    font-size: 2.5vw; /* Ajuste para pantallas medianas */
+  #another-text {
+      font-size: 4vw; /* Ajuste para pantallas medianas */
   }
 }
 
 @media (min-width: 1024px) {
-  .video-overlay h1 {
-    font-size: 3vw; /* Ajuste para pantallas grandes */
+  #display-time {
+      font-size: 3vw; /* Ajuste para pantallas grandes */
   }
 
-  .video-overlay p {
-    font-size: 1.5vw; /* Ajuste para pantallas grandes */
+  #another-text {
+      font-size: 2.5vw; /* Ajuste para pantallas grandes */
   }
 }
-
-
+#display-time {
+  position: absolute;
+  bottom: 60px; /* Espacio desde el borde inferior */
+  left: 10px; /* Espacio desde el borde izquierdo */
+  color: white;
+  font-size: 20px; /* Tamaño de la fuente */
+  padding: 5px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 50px; /* Tamaño de la fuente */
+}
 
 
 
@@ -359,7 +393,7 @@ header ul li a {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px; /* Ajusta la altura según sea necesario */
+  height: 600px; /* Ajusta la altura según sea necesario */
   width: 100%;
   display: flex;
   align-items: center; /* Centra verticalmente el contenido */
@@ -429,6 +463,88 @@ h1, p {
 }
 
 
+
+
+
+
+
+.instagram__img {
+  width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* La imagen se ajusta dentro del contenedor sin recortes */
+  display: block;
+  max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+  overflow: hidden; /* Evita que la imagen se desborde */
+}
+
+.instagram__tile {
+  position: relative;
+  overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
+  padding: 7px;
+  font-family: CircularStd-Black;
+  max-height: 100%; /* Limita la altura del contenedor para controlar el desbordamiento */
+}
+
+@media (min-width: 768px) {
+  .instagram__tile {
+    padding: 3px;
+  }
+}
+
+.instagram .row {
+  margin: -7px;
+}
+
+
+
+.title-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+
+@media (min-width: 768px) {
+  .instagram .row {
+    margin: -3px;
+  }
+}
+
+  .overlay-plus::before, .overlay-plus::after, .overlay-cross::before, .overlay-cross::after, .overlay-horizontal::before, .overlay-horizontal::after, .overlay-vertical::before, .overlay-vertical::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    transition: all 0.5s ease;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.15); }
+    @media (prefers-reduced-motion: reduce) {
+      .overlay-plus::before, .overlay-plus::after, .overlay-cross::before, .overlay-cross::after, .overlay-horizontal::before, .overlay-horizontal::after, .overlay-vertical::before, .overlay-vertical::after {
+        transition: none; } }
+  .overlay-plus.overlay-dark::before, .overlay-plus.overlay-dark::after, .overlay-cross.overlay-dark::before, .overlay-cross.overlay-dark::after, .overlay-horizontal.overlay-dark::before, .overlay-horizontal.overlay-dark::after, .overlay-vertical.overlay-dark::before, .overlay-vertical.overlay-dark::after {
+    background-color: rgba(0, 0, 0, 0.15); }
+  .overlay-plus::before, .overlay-plus::after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .overlay-plus:not(:hover)::before {
+    width: 0; }
+  .overlay-plus:not(:hover)::after {
+    height: 0; }
 
 
 
@@ -524,6 +640,9 @@ h1, p {
 .copyright-text {
   margin: 0;
 }
+
+
+
 
 @media (max-width: 991px) {
   .site-footer [class^=col-] {
@@ -642,3 +761,276 @@ h1, p {
   padding: 20px; /* Ajusta el padding según sea necesario */
   color: white; /* Asegura que el texto sea visible sobre el fondo */
 }
+
+.row {
+  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  justify-content: center; /* Alinea horizontalmente los elementos en el centro */
+  flex-wrap: nowrap; /* Asegura que todos los elementos estén en una sola línea */
+  margin: 0; /* Elimina márgenes para evitar desbordamiento */
+}
+
+.col {
+  flex: 1; /* Permite que las columnas se ajusten para ocupar espacio igual */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icono-servicio {
+  width: 100px; /* Tamaño fijo para los íconos */
+  height: auto; /* Mantiene la relación de aspecto */
+  filter: brightness(0) invert(1); /* Convierte los íconos a blanco */
+  margin-bottom: 15px; /* Añade espacio debajo de los íconos */
+}
+
+.arrow-icon {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 10px;
+  transform: rotate(-45deg); /* Rota la flecha para que apunte hacia la derecha */
+  -webkit-transform: rotate(-45deg);
+  margin: 0 20px; /* Añade margen a los lados de la flecha */
+  font-size: 24px; /* Ajusta el tamaño de la flecha si es necesario */
+}
+
+.parallax-section h1 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.parallax-section p {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #000; /* Color del texto */
+  border: 2px solid #000; /* Color del borde */
+  background-color: transparent; /* Fondo transparente */
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px; /* Bordes redondeados opcional */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.icon-button:hover {
+  color: #fff; /* Color del texto en hover */
+  background-color: #66A272; /* Fondo del botón en hover */
+}
+
+.icon-button i {
+  font-size: 25px; /* Tamaño del ícono */
+  color: #000; /* Color del ícono */
+  margin-right: 8px; /* Espaciado entre ícono y texto */
+}
+
+
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #66A272;
+  color: white;
+  width: 40px;  /* Ancho fijo */
+  height: 40px; /* Altura fija */
+  border-radius: 50%; /* Hace que el botón sea un círculo */
+  text-align: center;
+  font-size: 15px;  /* Tamaño del ícono */
+  line-height: 40px; /* Centra el ícono verticalmente */
+  display: none; /* Inicialmente escondida */
+  z-index: 1000;
+}
+
+
+.back-to-top:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+
+
+
+/*PRICE COLOR CODE START*/
+#generic_price_table .generic_content {
+  background-color: #fff;
+}
+
+#generic_price_table .generic_content .generic_head_price {
+  background-color: #f6f6f6;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head_bg {
+  border-color: #e4e4e4 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #e4e4e4;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head span {
+  color: #525252;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .sign {
+  color: #414141;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .currency {
+  color: #414141;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .cent {
+  color: #414141;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .month {
+  color: #414141;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul li {  
+  color: #a7a7a7;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul li span {
+  color: #414141;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul li:hover {
+  background-color: #E4E4E4;
+  border-left: 5px solid #2ECC71;
+}
+
+#generic_price_table .generic_content .generic_price_btn a {
+  border: 1px solid #2ECC71; 
+  color: #2ECC71;
+} 
+
+#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head_bg,
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg {
+  border-color: #2ECC71 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #2ECC71;
+  color: #fff;
+}
+
+#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head span,
+#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head span {
+  color: #fff;
+}
+
+#generic_price_table .generic_content:hover .generic_price_btn a,
+#generic_price_table .generic_content.active .generic_price_btn a {
+  background-color: #2ECC71;
+  color: #fff;
+}
+
+#generic_price_table {
+  margin: 50px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.row .table {
+  padding: 28px 0;
+}
+
+/*PRICE BODY CODE START*/
+#generic_price_table .generic_content {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+
+#generic_price_table .generic_content .generic_head_price {
+  border-radius: 0;
+  position: relative;
+  margin-bottom: 0;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head {
+  padding: 30px 0;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_head_content .head span {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag {
+  padding: 10px 0;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+#generic_price_table .generic_content .generic_head_price .generic_price_tag .price {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #E4E4E4;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul li span {
+  font-weight: 500;
+}
+
+#generic_price_table .generic_content .generic_feature_list ul li:hover {
+  background-color: #E4E4E4;
+  border-left: 5px solid #2ECC71;
+}
+
+#generic_price_table .generic_content .generic_price_btn a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #2ECC71;
+  border-radius: 3px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  color: #2ECC71;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#generic_price_table .generic_content .generic_price_btn a:hover {
+  background-color: #2ECC71;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  #generic_price_table {
+    margin: 50px 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+

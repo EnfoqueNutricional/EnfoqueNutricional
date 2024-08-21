@@ -26,11 +26,11 @@
 <div class="node-header-wrapper nocontent">
     <div role="complementary"  class="box" data-scroll-speed="2">
         <header>
-        <nav class="header-nav">
+        <nav class="container header-nav">
             <div class="header-block col-4">
                 <div class="logo-container">
                     <a href="#" class="logo">
-                        <img src="images/logo.png" alt="Logo" class="logo-image"> <!-- Imagen del logo -->
+                        <img src="images/logo2.png" alt="Logo" class="logo-image"> <!-- Imagen del logo -->
                     </a>
                 </div>
             </div>
@@ -59,17 +59,50 @@
     
     <section>
         <div class="video">
-            <video width="100%" height="400" autoplay muted loop>
-                <source src="images/videoBanner2.mp4" type="video/mp4">
+            <video autoplay muted loop>
+                <source src="images/videoBanner3.mp4" type="video/mp4">
             </video>
+            <div class="text-overlay">
+                <h1 id="another-text">COMER BIEN ES VIVIR BIEN</h1>
+                <h1 id="another-text">HAZLO POR TU SALUD</h1>
+            </div>
+            <div id="display-time"></div>
         </div>
     </section>
 
 
     <br>
     <br>
+
+    <section>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-12 mt-3" style="text-align: center;">
+                    <img src="images/icononut.png" style="width: 200px; height: 200px; display: block; margin: auto;" alt="">
+                    <p class="mt-3" style="font-size: 20px; font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                        Hola, soy Nutricionista Eliane, Licenciada en Nutrición y Dietética.
+                    </p>
+                    <h1 style="font-size: 28px; font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700;">
+                        Apasionada por transformar vidas
+                    </h1>
+                    <p style="font-size: 18px; font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                        Estoy aquí para mejorar tu salud y bienestar. Reserva tu consulta y diseñaremos un plan para ayudarte a alcanzar tu mejor versión.
+                    </p>
+                    <button type="button" class="icon-button">
+                        <i class="fa-brands fa-nutritionix"></i> Agendar
+                    </button>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
     
-    <section >
+                
+    
+    
+    
+    <!-- <section >
         <div class="container mt-5">
             <div class="row justify-content-center">
                 <div class="col-12 mt-3">
@@ -93,6 +126,10 @@
             </div>
         </div>
     
+    </section> -->
+
+    <section>
+
     </section>
 
 
@@ -115,17 +152,25 @@
         <div class="container-fluid p-0">
             <div class="parallax-content d-flex align-items-center justify-content-center">
                 <div class="container">
-                    <div class="row text-center">
-                        <div class="col-4">
+                    <div class="row text-center align-items-center">
+                        <!-- Columna 1 -->
+                        <div class="col-4 d-flex flex-column align-items-center text-center">
+                            <img src="images/doc.png" class="icono-servicio" alt="">
                             <h1 style="font-weight: bold; font-size: 20px;">VALORACIÓN NUTRICIONAL</h1>
                             <p style="font-size: 18px;">Evaluaremos tu estado nutricional y diseñaremos un plan personalizado para que tu cuerpo reciba exactamente lo que necesita. ¡Es el momento de transformar tus hábitos y lograr un bienestar total.</p>
                         </div>
-                        <div class="col-4">
+    
+                        <!-- Columna 2 -->
+                        <div class="col-4 d-flex flex-column align-items-center text-center">
+                            <img src="images/evalu.png" class="icono-servicio" alt="">
                             <h1 style="font-weight: bold; font-size: 20px;">EVALUACIÓN ANTROPOMÉTRICA</h1>
                             <p style="font-size: 18px;">Con balanzas inteligentes, evalúo tu composición corporal completa a distancia, como si estuvieras en mi consultorio. ¡Todo desde donde estés.</p>
                         </div>
-                        <div class="col-4">
-                            <h1 style="font-weight: bold; font-size: 20px;" >EDUCACIÓN ALIMENTARIA</h1>
+    
+                        <!-- Columna 3 -->
+                        <div class="col-4 d-flex flex-column align-items-center text-center">
+                            <img src="images/educa.png" class="icono-servicio" alt="">
+                            <h1 style="font-weight: bold; font-size: 20px;">EDUCACIÓN ALIMENTARIA</h1>
                             <p style="font-size: 18px;">En la consulta, no solo creo tu plan nutricional, sino que también te enseño a comer de forma saludable y sostenible, equilibrando tus alimentos favoritos. ¡Compartiremos tiempos de gran calidad.</p>
                         </div>
                     </div>
@@ -133,6 +178,244 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
+    <section class="instagram container">
+         <div class="mt-5 d-flex flex-column align-items-center text-center">
+        <h3>¿Qué te ofrecemos?</h3>
+        <h1>NUESTROS</h1>
+        <h1>SERVICIOS</h1>
+        
+    </div>
+        <div class="row mt-5">
+            <div class="col-md-4 px-0 d-flex flex-column">
+                <div class="instagram__tile">
+                    <a href="./producto.html?categoria=3" class="position-relative overflow-hidden d-block effect overlay-plus">
+                        <img loading="lazy" class="instagram__img" src="images/ofrecemos/consulta.jpg" width="466" height="525" alt="Insta image 1">
+                        <div class="title-overlay f-family-heavy" style="font-size: 30px;">CONSULTA ONLINE</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 px-0">
+                <div class="instagram__tile">
+                    <a href="./producto.html?categoria=1" class="position-relative overflow-hidden d-block effect overlay-plus">
+                        <img loading="lazy" class="instagram__img" src="images/ofrecemos/consulta.jpg" width="466" height="401" alt="Insta image 2">
+                        <div class="title-overlay f-family-heavy" style="font-size: 30px;">PERDIDA/AUMENTO DE PESO</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 px-0">
+                <div class="instagram__tile">
+                    <a href="./producto.html?categoria=4" class="position-relative overflow-hidden d-block effect overlay-plus">
+                        <img loading="lazy" class="instagram__img" src="images/ofrecemos/consulta.jpg" width="466" height="401" alt="Insta image 3">
+                        <div class="title-overlay f-family-heavy" style="font-size: 30px;">NUTRICION INFANTIL</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-md-4 px-0">
+                <div class="instagram__tile">
+                    <a href="./producto.html?categoria=2" class="position-relative overflow-hidden d-block effect overlay-plus">
+                        <img loading="lazy" class="instagram__img" src="images/ofrecemos/consulta.jpg" width="466" height="401" alt="Insta image 4">
+                        <div class="title-overlay f-family-heavy" style="font-size: 30px;">NUTRICION DEPORTIVA</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 px-0">
+                <div class="instagram__tile">
+                    <a href="./producto.html?categoria=5" class="position-relative overflow-hidden d-block effect overlay-plus">
+                        <img loading="lazy" class="instagram__img" src="images/ofrecemos/consulta.jpg" width="466" height="401" alt="Insta image 5">
+                        <div class="title-overlay f-family-heavy" style="font-size: 30px;">DIETAS</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 px-0">
+                <div class="instagram__tile">
+                    <a href="./producto.html?categoria=6" class="position-relative overflow-hidden d-block effect overlay-plus">
+                        <img loading="lazy" class="instagram__img" src="images/ofrecemos/consulta.jpg" width="466" height="401" alt="Insta image 4">
+                        <div class="title-overlay f-family-heavy" style="font-size: 30px;">ENFERMEDADES CRÓNICAS</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+    <div id="generic_price_table">   
+        <div>
+            <h1 class="mt-5 d-flex flex-column align-items-center text-center">NUESTROS PRECIOS</h1>
+        </div>
+        <section>
+          <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-12">
+                <!--PRICE HEADING START-->
+               
+                <!--//PRICE HEADING END-->
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <!--BLOCK ROW START-->
+            <div class="row">
+              <div class="col-md-4">
+                <!--PRICE CONTENT START-->
+                <div class="generic_content clearfix">
+                  <!--HEAD PRICE DETAIL START-->
+                  <div class="generic_head_price clearfix">
+                    <!--HEAD CONTENT START-->
+                    <div class="generic_head_content clearfix">
+                      <!--HEAD START-->
+                      <div class="head_bg"></div>
+                      <div class="head">
+                        <span>Basic</span>
+                      </div>
+                      <!--//HEAD END-->
+                    </div>
+                    <!--//HEAD CONTENT END-->
+                    <!--PRICE START-->
+                    <div class="generic_price_tag clearfix">  
+                      <span class="price">
+                        <span class="sign">$</span>
+                        <span class="currency">99</span>
+                        <span class="cent">.99</span>
+                        <span class="month">/MON</span>
+                      </span>
+                    </div>
+                    <!--//PRICE END-->
+                  </div>                            
+                  <!--//HEAD PRICE DETAIL END-->
+                  <!--FEATURE LIST START-->
+                  <div class="generic_feature_list">
+                    <ul>
+                      <li><span>2GB</span> Bandwidth</li>
+                      <li><span>150GB</span> Storage</li>
+                      <li><span>12</span> Accounts</li>
+                      <li><span>7</span> Host Domain</li>
+                      <li><span>24/7</span> Support</li>
+                    </ul>
+                  </div>
+                  <!--//FEATURE LIST END-->
+                  <!--BUTTON START-->
+                  <div class="generic_price_btn clearfix">
+                    <a class="" href="">Sign up</a>
+                  </div>
+                  <!--//BUTTON END-->
+                </div>
+                <!--//PRICE CONTENT END-->
+              </div>
+              <div class="col-md-4">
+                <!--PRICE CONTENT START-->
+                <div class="generic_content active clearfix">
+                  <!--HEAD PRICE DETAIL START-->
+                  <div class="generic_head_price clearfix">
+                    <!--HEAD CONTENT START-->
+                    <div class="generic_head_content clearfix">
+                      <!--HEAD START-->
+                      <div class="head_bg"></div>
+                      <div class="head">
+                        <span>Standard</span>
+                      </div>
+                      <!--//HEAD END-->
+                    </div>
+                    <!--//HEAD CONTENT END-->
+                    <!--PRICE START-->
+                    <div class="generic_price_tag clearfix">  
+                      <span class="price">
+                        <span class="sign">$</span>
+                        <span class="currency">199</span>
+                        <span class="cent">.99</span>
+                        <span class="month">/MON</span>
+                      </span>
+                    </div>
+                    <!--//PRICE END-->
+                  </div>                            
+                  <!--//HEAD PRICE DETAIL END-->
+                  <!--FEATURE LIST START-->
+                  <div class="generic_feature_list">
+                    <ul>
+                      <li><span>2GB</span> Bandwidth</li>
+                      <li><span>150GB</span> Storage</li>
+                      <li><span>12</span> Accounts</li>
+                      <li><span>7</span> Host Domain</li>
+                      <li><span>24/7</span> Support</li>
+                    </ul>
+                  </div>
+                  <!--//FEATURE LIST END-->
+                  <!--BUTTON START-->
+                  <div class="generic_price_btn clearfix">
+                    <a class="" href="">Sign up</a>
+                  </div>
+                  <!--//BUTTON END-->
+                </div>
+                <!--//PRICE CONTENT END-->
+              </div>
+              <div class="col-md-4">
+                <!--PRICE CONTENT START-->
+                <div class="generic_content clearfix">
+                  <!--HEAD PRICE DETAIL START-->
+                  <div class="generic_head_price clearfix">
+                    <!--HEAD CONTENT START-->
+                    <div class="generic_head_content clearfix">
+                      <!--HEAD START-->
+                      <div class="head_bg"></div>
+                      <div class="head">
+                        <span>Unlimited</span>
+                      </div>
+                      <!--//HEAD END-->
+                    </div>
+                    <!--//HEAD CONTENT END-->
+                    <!--PRICE START-->
+                    <div class="generic_price_tag clearfix">  
+                      <span class="price">
+                        <span class="sign">$</span>
+                        <span class="currency">299</span>
+                        <span class="cent">.99</span>
+                        <span class="month">/MON</span>
+                      </span>
+                    </div>
+                    <!--//PRICE END-->
+                  </div>                            
+                  <!--//HEAD PRICE DETAIL END-->
+                  <!--FEATURE LIST START-->
+                  <div class="generic_feature_list">
+                    <ul>
+                      <li><span>2GB</span> Bandwidth</li>
+                      <li><span>150GB</span> Storage</li>
+                      <li><span>12</span> Accounts</li>
+                      <li><span>7</span> Host Domain</li>
+                      <li><span>24/7</span> Support</li>
+                    </ul>
+                  </div>
+                  <!--//FEATURE LIST END-->
+                  <!--BUTTON START-->
+                  <div class="generic_price_btn clearfix">
+                    <a class="" href="">Sign up</a>
+                  </div>
+                  <!--//BUTTON END-->
+                </div>
+                <!--//PRICE CONTENT END-->
+              </div>
+            </div>  
+            <!--//BLOCK ROW END-->
+          </div>
+        </section>             
+      </div>
+      
+    
+    
+    
 
 
 
@@ -145,7 +428,7 @@
     <div class="modal-dialog modal-dialog-centered text-center d-flex justify-content-center">
         <div class="modal-content w-75">
             <div class="modal-body p-4">
-                <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.webp" alt="avatar" class="rounded-circle position-absolute top-0 start-50 translate-middle h-50" />
+                <img src="images/logoConFondo.jpeg" style="max-height: 80%;" alt="avatar" class="rounded-circle position-absolute top-0 start-50 translate-middle h-50" />
                 <form id="consultaForm">
                     <div>
                         <h5 class="pt-5 my-3">Hola, escribe aquí tu consulta</h5>
@@ -165,7 +448,10 @@
 </div>
 <!-- Modal -->
     
-    
+<a href="#" class="back-to-top">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</a>
+
     
     
 
@@ -189,20 +475,20 @@
             <h6>Servicios</h6>
             <ul class="footer-links">
             <li><a href="http://scanfcode.com/category/c-language/"></a></li>
-            <li><a href="http://scanfcode.com/category/front-end-development/">DIETAS</a></li>
-            <li><a href="http://scanfcode.com/category/back-end-development/">ASESORIA NUTRICIONAL</a></li>
-            <li><a href="http://scanfcode.com/category/java-programming-language/">ESTILO DE VIDA SALUDABLE</a></li>
-            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+            <li><a href="http://scanfcode.com/category/front-end-development/">PERDIDA/AUMENTO DE PESO</a></li>
+            <li><a href="http://scanfcode.com/category/back-end-development/">NUTRICIÓN INFANTL</a></li>
+            <li><a href="http://scanfcode.com/category/java-programming-language/">NUTRICIÓN DEPORTIVA</a></li>
+            <li><a href="http://scanfcode.com/category/android/">DIETAS</a></li>
+            <li><a href="http://scanfcode.com/category/android/">ENFERMEDADES CRÓNICAS</a></li>
+
             </ul>
         </div>
 
         <div class="col-xs-6 col-md-3">
             <h6>ENLACES RÁPIDOS</h6>
             <ul class="footer-links">
-            <li><a href="http://scanfcode.com/about/">Inicio</a></li>
-            <li><a href="http://scanfcode.com/contact/">Sobre mi</a></li>
-            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contáctanos</a></li>
-            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="http://scanfcode.com/about/">INICIO</a></li>
+            <li><a href="http://scanfcode.com/contact/">SOBRE MI</a></li>
             </ul>
         </div>
         </div>

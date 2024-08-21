@@ -84,7 +84,7 @@ document.getElementById('consultaForm').addEventListener('submit', function(even
     var consulta = document.getElementById('consulta').value.trim();
     
     // Asegúrate de reemplazar el número de teléfono con tu número de WhatsApp
-    var telefono = '51920580635'; // Reemplaza con tu número en formato internacional
+    var telefono = ''; // Reemplaza con tu número en formato internacional
     
     if (consulta) {
         // Construir la URL de WhatsApp Web
@@ -97,3 +97,39 @@ document.getElementById('consultaForm').addEventListener('submit', function(even
     }
 });
 
+
+
+function myFunc() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+
+  // Formato de 12 horas
+  var period = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // La hora '0' debe mostrarse como '12'
+
+  // Asegurar que minutos y segundos tengan dos dígitos
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  // Construir la cadena de tiempo
+  var time = hours + ":" + minutes + ":" + seconds + " " + period;
+
+  // Mostrar el tiempo en el elemento con id 'display-time'
+  document.getElementById('display-time').innerHTML = time;
+}
+
+// Llamar a la función inmediatamente y luego cada segundo
+myFunc();
+setInterval(myFunc, 1000);
+
+window.onscroll = function() {
+  var backToTop = document.querySelector('.back-to-top');
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      backToTop.style.display = 'block';
+  } else {
+      backToTop.style.display = 'none';
+  }
+};
