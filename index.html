@@ -21,7 +21,7 @@
             <div class="col-md-4">
                 <div class="logo">
                     <a href="#" class="logo">
-                        <img src="images/logo2.png" alt="Logo" style="width: 60%; height: auto;">
+                        <img src="images/logo2.png" alt="Logo" style="width: 55%; height: auto;">
                     </a>
                 </div>
             </div>
@@ -43,12 +43,16 @@
     </header>
 
     <section>
-        <div class="video">
-            <video autoplay muted loop>
-                <source src="images/video5.mp4" type="video/mp4">
-            </video>
-            <div class="text-overlay">
-                <h1 id="another-text">COMER BIEN ES VIVIR BIEN HAZLO POR TU SALUD</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="video">
+                    <video autoplay muted loop>
+                        <source src="images/video5.mp4" type="video/mp4">
+                    </video>
+                    <div class="text-overlay">
+                        <h1 id="another-text">COMER BIEN ES VIVIR BIEN HAZLO POR TU SALUD</h1>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -56,8 +60,12 @@
     <br>
     <br>
 
+    <div class="d-flex justify-content-center mb-5">
+        <img width="500" height="200" src="https://www.nutricionista.pe/wp-content/uploads/2022/08/Diseno_sin_titulo__10_-removebg-preview.png"/>
+    </div>
+
     <section>
-        <div class=" mt-5">
+        <div class="">
             <div class="row justify-content-center">
                 <div class="col-12 mt-3" style="text-align: center;">
                     <img src="images/icononut.png" style="width: 180px; height: auto; display: block; margin: auto;" alt="">
@@ -68,17 +76,48 @@
                         Estoy aquí para mejorar tu salud y bienestar. Reserva tu consulta y diseñaremos un plan para ayudarte a alcanzar tu mejor versión.
                     </p>
                     <button type="button" class="button-ver">
-                        <a href="sobremi.html"><i class="fa-brands fa-nutritionix"></i> Ver más</a>
+                        <a href="#"><i class="fa-brands fa-nutritionix"></i> Ver más</a>
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="mt-5">
-        <div class="d-flex justify-content-center mb-5">
-            <img width="500" height="200" src="https://www.nutricionista.pe/wp-content/uploads/2022/08/Diseno_sin_titulo__10_-removebg-preview.png"/>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex text-align-center justify-content-center">
+                    <h1>UN POCO DE MI EXPERIENCIA</h1>
+                </div>
+            </div>
         </div>
+    </div>
+
+
+  
+        <div class="container-acordeon">
+           
+            <div class="panel active" style="background-image: url('images/acordeon/foto1.jpg');">
+                <h3>explore the world</h3>
+            </div>
+            <div class="panel" style="background-image: url('images/acordeon/img1.jpeg');">
+                <h3>explore the world</h3>
+            </div>
+            <div class="panel" style="background-image: url('images/acordeon/img2.jpeg');">
+                <h3>explore the world</h3>
+            </div>
+            <div class="panel" style="background-image: url('images/acordeon/img3.jpeg');">
+                <h3>explore the world</h3>
+            </div>
+            <div class="panel" style="background-image: url('images/acordeon/img5.jpeg');">
+                <h3>explore the world</h3>
+            </div>
+        </div>
+
+
+
+    <section class="mt-5">
+        
     
         <div class="d-flex flex-column align-items-center text-center">
             <h1 style="font-size: 38px; font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700;">“HACER DIETA NO ES DEJAR DE COMER <br>
@@ -86,6 +125,8 @@
             <p style="font-size: 18px; font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700;">Te cuento el paso a paso de mi evaluación nutricional.</p>
         </div>
     </section>
+
+
 
     <section class="parallax-section mt-5">
         <div class="container-fluid p-0">
@@ -277,7 +318,7 @@
 
 
 
-<!--     
+
     <footer class="footer mt-5">
         <div class="container">
             <div class="row">
@@ -322,7 +363,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     
     
     
@@ -340,12 +381,28 @@
         if (header) {
             console.log("Elemento <header> encontrado:", header);
             window.addEventListener("scroll", function() {
-                header.classList.toggle("abajo", window.scrollY > 0);
+                header.classList.toggle("abajo", window.scrollY > 2);
             });
         } else {
             console.warn("No se encontró el elemento <header> en el DOM.");
         }
     });
+
+    const panels = document.querySelectorAll(".panel");
+
+    panels.forEach(function (panel) {
+        panel.addEventListener("click", function () {
+            removeActive();
+            panel.classList.add("active");
+        });
+    });
+
+    // check if active class is on and then remove
+    function removeActive() {
+        panels.forEach(function (panel) {
+            panel.classList.remove("active");
+        });}
+
 
 
 
