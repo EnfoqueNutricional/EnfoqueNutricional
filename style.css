@@ -4,6 +4,13 @@
   padding: 0;
 }
 
+body {
+  margin: 0;
+  font-family: Oswald, Sans-serif;
+  position: relative;
+}
+
+
 /* Estilos del header */
 header {
   position: fixed;
@@ -50,52 +57,28 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Bloque central */
-.header-block.middle-container {
-  flex: 2; /* El bloque central ocupa el doble de espacio que los otros bloques */
+/* .header-block.middle-container {
+  flex: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+} */
 
-.logo-container .logo-image {
-  max-width: 55%; /* Ajusta el tamaño máximo del logo a 70px */
-  height: auto; /* Mantiene la proporción de la imagen */
-  vertical-align: middle; /* Alinea verticalmente con el texto */
-}
+
 
 /* Bloque de la derecha (redes sociales) */
-.header-block.nav-container {
+/* .header-block.nav-container {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
+} */
 
 /* Estado cuando el header está abajo */
 header.abajo {
-  background-color: rgba(100, 107, 99, 0.8); /* Color de fondo con 80% de opacidad */
+  background-color: rgba(0, 0, 0, 0.8); /* Color de fondo con 80% de opacidad */
   padding: 1px 20px;
 }
 
@@ -132,73 +115,10 @@ header ul li a {
   display: none; /* Oculto por defecto */
   background: none;
   border: none;
-  color: #fff;
   cursor: pointer;
   font-size: 20px;
   z-index: 20; /* Asegúrate de que esté encima del menú */
 }
-
-
-
-@media (max-width: 768px) {
-  /* Oculta el menú de navegación por defecto en dispositivos móviles */
-  .header-nav ul {
-    display: none; /* Oculta el menú de navegación en dispositivos móviles */
-  }
-  .header-nav.active .middle-container,
-  .header-nav.active .nav-container {
-    display: flex; /* Muestra los bloques del menú cuando está activo */
-    flex-direction: row; /* Apila verticalmente los elementos del menú */
-    width: 100%; /* Asegura que el menú ocupe todo el ancho */
-    position: absolute; 
-    left: 0; /* Alinea el menú al borde izquierdo */
-    z-index: 20; /* Asegura que el menú esté encima de otros elementos */
-  }
-
-  /* Muestra el menú cuando el contenedor tiene la clase 'active' */
-  .header-nav.active ul {
-    display: flex; /* Muestra el menú de navegación cuando está activo */
-    flex-direction: row; /* Alinea los elementos horizontalmente */
-  }
-
-  /* Muestra el botón de menú hamburguesa en dispositivos móviles */
-  .menu-toggle {
-    display: block; /* Muestra el botón de menú hamburguesa */
-    position: absolute; /* Posiciona el botón sobre el header */
-    top: 15px; /* Ajusta la posición del botón */
-    right: 15px; /* Alinea el botón al borde derecho del header */
-    z-index: 25; /* Asegura que el botón esté encima de otros elementos */
-    background-color: transparent; /* Fondo transparente */
-    border: none; /* Sin borde */
-    cursor: pointer; /* Cursor tipo puntero */
-    padding: 10px; /* Espaciado alrededor del botón */
-  }
-
-  /* Ajusta el tamaño del logo en dispositivos móviles */
-  .logo-container .logo-image {
-    max-width: 100px; /* Ajusta el tamaño máximo del logo */
-    height: auto; /* Mantiene la proporción del logo */
-  }
-
-  /* Ajusta el estilo del bloque central en dispositivos móviles */
-  .header-block.middle-container {
-    flex: 1; /* Ajusta el tamaño del bloque central si es necesario */
-    padding: 10px; /* Añade padding para espaciado */
-    text-align: center; /* Centra el texto dentro del bloque */
-    max-width: 90%; /* Ajusta el ancho máximo del bloque */
-    margin: 0 auto; /* Centra el bloque dentro del contenedor */
-  }
-
-  /* Opcional: Ajusta el estilo del bloque de íconos de redes sociales en dispositivos móviles */
-  .header-block.nav-container {
-    flex: 1; /* Ajusta el tamaño del bloque de íconos si es necesario */
-    padding: 10px; /* Añade padding para espaciado */
-    text-align: center; /* Centra el texto dentro del bloque */
-    max-width: 90%; /* Ajusta el ancho máximo del bloque */
-    margin: 0 auto; /* Centra el bloque dentro del contenedor */
-  }
-}
-
 
 
 
@@ -313,13 +233,7 @@ header ul li a {
   height: 100%;
   object-fit: cover;
 }
-#display-time {
-  position: absolute; /* Posiciona el elemento de manera absoluta dentro del contenedor padre */
-  bottom: 80px; /* Ajusta la distancia desde el borde inferior del contenedor */
-  left: 20px; /* Ajusta la distancia desde el borde izquierdo del contenedor */
-  color: white; /* Asegúrate de que el texto sea visible sobre el video */
-  font-size: 24px; /* Ajusta el tamaño del texto según sea necesario */
-}
+
 
 .text-overlay {
   position: absolute;
@@ -333,13 +247,11 @@ header ul li a {
 
 #another-text {
   color: white;
-  font-size: 40px; /* Tamaño de la fuente */
-  padding: 10px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
   opacity: 1; /* Inicialmente visible */
   animation: fadeOut 1s forwards; /* Aplicar animación de desvanecimiento */
   animation-delay: 1s; /* Espera 1 segundo antes de iniciar la animación */
   margin: 0; /* Elimina márgenes para evitar espacios adicionales */
+  font-size: 24px;
 }
 
 @keyframes fadeOut {
@@ -370,18 +282,6 @@ header ul li a {
       font-size: 2.5vw; /* Ajuste para pantallas grandes */
   }
 }
-#display-time {
-  position: absolute;
-  bottom: 60px; /* Espacio desde el borde inferior */
-  left: 10px; /* Espacio desde el borde izquierdo */
-  color: white;
-  font-size: 20px; /* Tamaño de la fuente */
-  padding: 5px; /* Espaciado interno */
-  border-radius: 5px; /* Bordes redondeados */
-  font-size: 50px; /* Tamaño de la fuente */
-}
-
-
 
 
 
@@ -400,13 +300,7 @@ header ul li a {
   justify-content: center; /* Centra horizontalmente el contenido */
 }
 
-.parallax-content {
-  position: relative;
-  text-align: center; /* Asegura que el texto dentro de las columnas esté centrado */
-  color: white;
-  padding: 20px;
-  max-width: 100%; /* Asegura que el contenido no sobrepase el ancho de la imagen */
-}
+
 
 .container {
   max-width: 1200px; /* Ajusta el ancho máximo del contenedor según sea necesario */
@@ -417,50 +311,11 @@ header ul li a {
   margin: 0;
 }
 
-.col-4 {
-  padding: 15px; /* Ajusta el padding según sea necesario */
-}
 
 h1, p {
   margin: 0;
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-  .parallax-section {
-    height: 300px; /* Ajusta la altura según sea necesario para pantallas más pequeñas */
-  }
-
-  .parallax-content {
-    padding: 10px; /* Reduce el padding en pantallas más pequeñas */
-  }
-
-  h1 {
-    font-size: 24px; /* Ajusta el tamaño de la fuente del título en pantallas más pequeñas */
-  }
-
-  p {
-    font-size: 16px; /* Ajusta el tamaño de la fuente del párrafo en pantallas más pequeñas */
-  }
-}
-
-@media (max-width: 480px) {
-  .parallax-section {
-    height: 200px; /* Ajusta la altura según sea necesario para pantallas más pequeñas */
-  }
-
-  .parallax-content {
-    padding: 5px; /* Reduce aún más el padding en pantallas muy pequeñas */
-  }
-
-  h1 {
-    font-size: 20px; /* Ajusta el tamaño de la fuente del título en pantallas muy pequeñas */
-  }
-
-  p {
-    font-size: 14px; /* Ajusta el tamaño de la fuente del párrafo en pantallas muy pequeñas */
-  }
-}
 
 
 
@@ -596,7 +451,7 @@ h1, p {
 }
 
 .site-footer a:hover {
-  color: #3366cc;
+  color: #6fbe5e;
   text-decoration: none;
 }
 
@@ -616,7 +471,7 @@ h1, p {
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #3366cc;
+  color: #000;
   text-decoration: none;
 }
 
@@ -692,7 +547,7 @@ h1, p {
 }
 
 .social-icons a:hover {
-  background-color: #00a1ff;
+  background-color: #000;
 }
 
 .social-icons i {
@@ -732,13 +587,6 @@ h1, p {
 
 
 
-.d-flex {
-  width: 100%;
-}
-
-.text-center h1, .text-center p {
-  margin: 0;
-}
 
 
 
@@ -751,49 +599,38 @@ h1, p {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  height: 500px; /* Ajusta la altura según sea necesario */
+  height: auto; /* Ajusta la altura según sea necesario */
   width: 100%;
 }
 
 .parallax-content {
-  position: relative;
-  z-index: 1; /* Asegura que el contenido esté por encima del fondo */
-  padding: 20px; /* Ajusta el padding según sea necesario */
-  color: white; /* Asegura que el texto sea visible sobre el fondo */
+  color: white;
 }
 
 .row {
-  display: flex; /* Usa flexbox para alinear los elementos horizontalmente */
-  align-items: center; /* Alinea verticalmente los elementos en el centro */
-  justify-content: center; /* Alinea horizontalmente los elementos en el centro */
-  flex-wrap: nowrap; /* Asegura que todos los elementos estén en una sola línea */
-  margin: 0; /* Elimina márgenes para evitar desbordamiento */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que las columnas se ajusten en pantallas pequeñas */
 }
 
-.col {
-  flex: 1; /* Permite que las columnas se ajusten para ocupar espacio igual */
+.col-md-4 {
+  flex: 1;
+  max-width: 33.33%; /* Mantiene las columnas del mismo tamaño en pantallas grandes */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 20px;
+}
+
+.col-sm-12 {
+  max-width: 100%; /* Asegura que las columnas ocupen el 100% del ancho en pantallas pequeñas */
+  margin-bottom: 20px;
 }
 
 .icono-servicio {
-  width: 100px; /* Tamaño fijo para los íconos */
-  height: auto; /* Mantiene la relación de aspecto */
   filter: brightness(0) invert(1); /* Convierte los íconos a blanco */
-  margin-bottom: 15px; /* Añade espacio debajo de los íconos */
-}
-
-.arrow-icon {
-  border: solid white;
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 10px;
-  transform: rotate(-45deg); /* Rota la flecha para que apunte hacia la derecha */
-  -webkit-transform: rotate(-45deg);
-  margin: 0 20px; /* Añade margen a los lados de la flecha */
-  font-size: 24px; /* Ajusta el tamaño de la flecha si es necesario */
 }
 
 .parallax-section h1 {
@@ -813,217 +650,443 @@ h1, p {
 
 
 
-.icon-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  color: #000; /* Color del texto */
-  border: 2px solid #000; /* Color del borde */
-  background-color: transparent; /* Fondo transparente */
-  cursor: pointer;
-  text-decoration: none;
-  border-radius: 4px; /* Bordes redondeados opcional */
-  transition: background-color 0.3s, color 0.3s;
-}
 
-.icon-button:hover {
-  color: #fff; /* Color del texto en hover */
-  background-color: #66A272; /* Fondo del botón en hover */
-}
-
-.icon-button i {
-  font-size: 25px; /* Tamaño del ícono */
-  color: #000; /* Color del ícono */
-  margin-right: 8px; /* Espaciado entre ícono y texto */
-}
-
-
-
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #66A272;
-  color: white;
-  width: 40px;  /* Ancho fijo */
-  height: 40px; /* Altura fija */
-  border-radius: 50%; /* Hace que el botón sea un círculo */
-  text-align: center;
-  font-size: 15px;  /* Tamaño del ícono */
-  line-height: 40px; /* Centra el ícono verticalmente */
-  display: none; /* Inicialmente escondida */
-  z-index: 1000;
-}
-
-
-.back-to-top:hover {
-  background-color: #555;
-}
-
-
-
-
-
-
-
-
-
-/*PRICE COLOR CODE START*/
-#generic_price_table .generic_content {
-  background-color: #fff;
-}
-
-#generic_price_table .generic_content .generic_head_price {
-  background-color: #f6f6f6;
-}
-
-#generic_price_table .generic_content .generic_head_price .generic_head_content .head_bg {
-  border-color: #e4e4e4 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #e4e4e4;
-}
-
-#generic_price_table .generic_content .generic_head_price .generic_head_content .head span {
-  color: #525252;
-}
-
-#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .sign {
-  color: #414141;
-}
-
-#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .currency {
-  color: #414141;
-}
-
-#generic_price_table .generic_content .generic_head_price .generic_price_tag .price .cent {
-  color: #414141;
-}
-
-#generic_price_table .generic_content .generic_head_price .generic_price_tag .month {
-  color: #414141;
-}
-
-#generic_price_table .generic_content .generic_feature_list ul li {  
-  color: #a7a7a7;
-}
-
-#generic_price_table .generic_content .generic_feature_list ul li span {
-  color: #414141;
-}
-
-#generic_price_table .generic_content .generic_feature_list ul li:hover {
-  background-color: #E4E4E4;
-  border-left: 5px solid #2ECC71;
-}
-
-#generic_price_table .generic_content .generic_price_btn a {
-  border: 1px solid #2ECC71; 
-  color: #2ECC71;
-} 
-
-#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head_bg,
-#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head_bg {
-  border-color: #2ECC71 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #2ECC71;
-  color: #fff;
-}
-
-#generic_price_table .generic_content:hover .generic_head_price .generic_head_content .head span,
-#generic_price_table .generic_content.active .generic_head_price .generic_head_content .head span {
-  color: #fff;
-}
-
-#generic_price_table .generic_content:hover .generic_price_btn a,
-#generic_price_table .generic_content.active .generic_price_btn a {
-  background-color: #2ECC71;
-  color: #fff;
-}
-
-#generic_price_table {
-  margin: 50px 0;
-  font-family: 'Raleway', sans-serif;
-}
-
-.row .table {
-  padding: 28px 0;
-}
-
-/*PRICE BODY CODE START*/
-#generic_price_table .generic_content {
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-}
-
-#generic_price_table .generic_content .generic_head_price {
-  border-radius: 0;
-  position: relative;
-  margin-bottom: 0;
-}
-
-#generic_price_table .generic_content .generic_head_price .generic_head_content .head {
+.footer {
+  background-color: #f0ebd7;
   padding: 30px 0;
+  /* position: relative;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); */
+  width: 100%; /* Asegúrate de que el ancho del footer no exceda el body */
+  box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
+  overflow: hidden; /* Previene desbordamientos */
 }
 
-#generic_price_table .generic_content .generic_head_price .generic_head_content .head span {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
+.footer .row {
+  display: flex; /* Usa Flexbox para alinear horizontalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: flex-start; /* Alinea los elementos al principio de la columna */
+  margin-bottom: 20px;
 }
 
-#generic_price_table .generic_content .generic_head_price .generic_price_tag {
-  padding: 10px 0;
-  border-bottom: 1px solid #E4E4E4;
+.footer .row .col-lg-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido dentro de cada columna */
 }
 
-#generic_price_table .generic_content .generic_head_price .generic_price_tag .price {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.4;
+.footer h6 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #000; /* Color de texto predeterminado */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
-#generic_price_table .generic_content .generic_feature_list ul {
-  margin: 0;
-  padding: 0;
+.footer h6:hover {
+  color: #7bdcb5; /* Color del texto al pasar el mouse */
+}
+
+.footer-logo, .footer-links, .footer-services, .footer-contact {
+  text-align: center; /* Centra el texto dentro de las columnas */
+  color: #000;
+}
+
+.footer-logo .logo {
+  margin-bottom: 10px;
+}
+
+.footer ul {
   list-style: none;
+  padding: 0;
 }
 
-#generic_price_table .generic_content .generic_feature_list ul li {
-  padding: 10px 15px;
-  border-bottom: 1px solid #E4E4E4;
+.footer ul li {
+  margin-bottom: 10px;
 }
 
-#generic_price_table .generic_content .generic_feature_list ul li span {
-  font-weight: 500;
-}
-
-#generic_price_table .generic_content .generic_feature_list ul li:hover {
-  background-color: #E4E4E4;
-  border-left: 5px solid #2ECC71;
-}
-
-#generic_price_table .generic_content .generic_price_btn a {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #2ECC71;
-  border-radius: 3px;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 700;
+.footer ul li a {
   text-decoration: none;
-  color: #2ECC71;
-  transition: background-color 0.3s, color 0.3s;
+  color: #000; /* Color de enlace predeterminado */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
 }
 
-#generic_price_table .generic_content .generic_price_btn a:hover {
-  background-color: #2ECC71;
-  color: #fff;
+.footer ul li a:hover {
+  color: #7bdcb5; /* Color del enlace al pasar el mouse */
 }
 
-@media (max-width: 767px) {
-  #generic_price_table {
-    margin: 50px 0;
-  }
+.footer .social-icons a {
+  margin: 0 10px;
+  color: #f0ebd7;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
 }
+
+.footer .social-icons a:hover {
+  color: #7bdcb5; /* Color del ícono de redes sociales al pasar el mouse */
+}
+
+
+/* BLOQUE DE SECCION */
+
+
+.button-ver {
+  background-color: #6fbe5e; /* Fondo blanco */
+  border-radius: 15px; 
+  color: #000000; /* Texto en negro */
+  border: 2px solid #000000; /* Borde negro */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Suave transición para los cambios */
+}
+
+.button-ver:hover {
+  background-color: #6fbe5e; /* Cambio de color de fondo al pasar el cursor */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el cursor */
+  border: 2px solid #000000; /* Cambio de color de borde al pasar el cursor */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --bg-card:#eff0f0;
+    --clr-violet: #6fbe5e;
+    --clr-gray-price:#323639;
+    --clr-gray-time: #aeb1b2;
+    --clr-gray-btn:  #d6d7d7;
+
+    --clr-black: #000 ;
+    --clr-white: #fff ;
+}
+
+* , ::before , ::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+/* Pricing Section */
+.pricing {
+    padding: 50px 20px;
+}
+/* ChangeTime Section */
+.changeTime {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-gap: 5px;
+    gap: 5px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 1px;
+    border: 2px solid #d6d7d7;
+    border: 2px solid var(--clr-gray-btn , #d6d7d7);
+    background-color: #eff0f0;
+    background-color: var(--bg-card , #eff0f0);
+}
+
+.change-time__link {
+   display: block;
+   text-decoration: none;
+   padding: 12px 0;
+   width: 80px;
+   text-align: center;
+   border-radius: 25px;
+   font-size: .8rem;
+   color: #000;
+   color: var(--clr-black , #000);
+}
+
+.changeTime__monthly {
+    background-color: #6fbe5e;
+    background-color: var(--clr-violet ,#6fbe5e);
+    color: #fff;
+    color: var(--clr-white);
+    
+}
+/* Cards Section */
+.cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    grid-gap: 15px;
+    gap: 15px;
+    margin-top: 20px;
+}
+/* Card Section */
+.card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto 15px 60px 15px 170px 15px auto;
+    grid-template-rows: auto 60px 170px auto;
+        grid-template-areas: 
+    "card__title"
+    "cardPrice"
+    "cardList"
+    "card__signUp";
+    grid-gap: 15px;
+    gap: 15px;
+    padding: 20px ;
+    border-radius: 15px;
+    background-color: #eff0f0;
+    background-color: var(--bg-card , #eff0f0);
+    cursor: pointer;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+    border: 2px solid #6fbe5e;
+    border: 2px solid var(--clr-violet ,#6fbe5e) ;
+    -webkit-transition: .1s;
+    transition: .1s;
+}
+
+.card--2 {
+    border: 2px solid #6fbe5e;
+    border: 2px solid var(--clr-violet ,#6fbe5e) ;
+}
+
+.cardTitle-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.card__popular {
+    display: block;
+    padding: 5px 10px;
+    font-size: .85rem;
+    border-radius: 3px;
+    color: #fff;
+    color: var(--clr-white , #fff);
+    background-color: #323639;
+    background-color: var(--clr-gray-price , #323639);
+}
+
+.card__title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-row: 1;
+    grid-column: 1;
+    grid-area: card__title;
+    margin: 0;
+    font-size: 1.25rem;
+}
+/* CardPrice Section */
+.cardPrice {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-row: 3;
+  grid-column: 1;
+  grid-area: cardPrice;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.cardPrice__price {
+    margin-right: 5px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #323639;
+    color: var(--clr-gray-price , #323639);
+}
+
+#cardPricePro.active {
+    background-color: #6fbe5e;
+}
+
+.cardPrice__time {
+    margin-bottom: 3px;
+    color: #aeb1b2;
+    color: var(--clr-gray-time , #aeb1b2);
+}
+/* CardList Section */
+.cardList {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-row: 5;
+    grid-column: 1;
+    grid-area: cardList;
+    margin: 0;
+    padding-left: 0px;
+}
+
+.cardList__item {
+    margin-bottom: 10px;
+    list-style: none;
+}
+/* Card__signUp Section */
+.card__signUp {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-row: 7;
+    grid-column: 1;
+    grid-area: card__signUp;
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border: 1px solid #d6d7d7;
+    border: 1px solid var(--clr-gray-btn , #d6d7d7);
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px #d6d7d7;
+            box-shadow: 0px 1px #d6d7d7;
+    -webkit-box-shadow: 0px 1px var(--clr-gray-btn , #d6d7d7);
+            box-shadow: 0px 1px var(--clr-gray-btn , #d6d7d7);
+    color: #000;
+    color: var(--clr-black , #000);
+    background-color: #fff;
+    background-color: var(--clr-white , #fff);
+}
+
+.card__signUp--bg {
+    color: #fff;
+    color: var(--clr-white , #fff);
+    background-color: #6fbe5e;
+    background-color: var(--clr-violet ,#6fbe5e) ;
+}
+/* Media Screen Section */
+@media screen and (min-width:768px) {
+    .cards {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .card {
+        -ms-grid-columns: 225px;
+        grid-template-columns: 225px;
+    }
+
+    .card__title {
+        font-size: 1.75rem;
+    }
+
+    .cardPrice__price {
+        font-size: 3.5rem;
+    }
+
+}
+
+
+
+
+
+.container-acordeon {
+	display: flex;
+	width: 90vw;
+}
+
+.panel {
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 80vh;
+	border-radius: 8px;
+	cursor: pointer;
+	color: white;
+	flex: 0.5;
+	margin: 12px;
+	position: relative;
+	transition: flex 0.3s ease-in;
+}
+
+.panel h3 {
+	font-size: 24px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	margin: 0;
+	opacity: 0;
+}
+
+.panel.active {
+	flex: 5;
+}
+
+.panel.active h3 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.2s;
+}
+
+@media (max-width: 480px) {
+	.container {
+		width: 100vw;
+	}
+
+	.panel:nth-of-type(4),
+	.panel:nth-of-type(4) {
+		display: none;
+	}
+}
+
 
 
 
