@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -31,24 +32,6 @@ header {
   width: 100%;
 }
 
-/* Bloque de la izquierda (logo) */
-.header-block.col-4 {
-  flex: 1; /* Cada bloque ocupa 1 parte del espacio disponible */
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.custom-btn {
-  background-color: transparent; /* Fondo transparente */
-  border: 1px solid transparent; /* Borde inicialmente transparente */
-  color: #f0ebd7; /* Color del texto */
-  padding: 10px 20px; /* Relleno para el tamaño del botón */
-  font-size: 16px; /* Tamaño del texto */
-  border-radius: 50px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el cursor a pointer */
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transición suave para fondo, color y borde */
-}
 
 .custom-btn:hover {
   border-color: #f0ebd7; /* Cambia el borde al color secundario en hover */
@@ -57,36 +40,18 @@ header {
 
 
 
-/* Bloque central */
-/* .header-block.middle-container {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
-
-
-
-/* Bloque de la derecha (redes sociales) */
-/* .header-block.nav-container {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-} */
-
 /* Estado cuando el header está abajo */
 header.abajo {
   background-color: rgba(0, 0, 0, 0.8); /* Color de fondo con 80% de opacidad */
   padding: 1px 20px;
+  transition: padding 0.75s, background-color 0.75s;
 }
 
-/* No cambiar el color del texto al hacer scroll */
+/* Estilos generales para los elementos dentro de header.abajo */
 header.abajo .logo,
 header.abajo ul li a,
 header.abajo .header-block {
-  color: #f0ebd7; /* Mantener el color blanco del texto */
+  color: #f0ebd7; /* Color blanco para el texto */
 }
 
 /* Estilos para los enlaces de la lista */
@@ -110,108 +75,10 @@ header ul li a {
   font-size: 16px;
 }
 
-/* Botón de menú */
-.menu-toggle {
-  display: none; /* Oculto por defecto */
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  z-index: 20; /* Asegúrate de que esté encima del menú */
-}
 
 
 
 
-
-/* Estilo general */
-.d-flex {
-  display: flex;
-}
-
-.justify-content-center {
-  justify-content: center;
-}
-
-.mb-5 {
-  margin-bottom: 3rem; /* Ajusta el margen inferior según sea necesario */
-}
-
-.text-center {
-  text-align: center;
-}
-
-.responsive-image {
-  width: 100%;
-  max-width: 400px; /* Ajusta el ancho máximo de la imagen según sea necesario */
-  height: auto; /* Mantiene la proporción de la imagen */
-}
-
-.responsive-heading {
-  font-size: 38px;
-  font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-.responsive-paragraph {
-  font-size: 18px;
-  font-family: 'GT America', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-  .responsive-heading {
-      font-size: 32px; /* Ajusta el tamaño de la fuente del título en pantallas más pequeñas */
-  }
-
-  .responsive-paragraph {
-      font-size: 16px; /* Ajusta el tamaño de la fuente del párrafo en pantallas más pequeñas */
-  }
-}
-
-@media (max-width: 480px) {
-  .responsive-heading {
-      font-size: 28px; /* Ajusta el tamaño de la fuente del título en pantallas muy pequeñas */
-  }
-
-  .responsive-paragraph {
-      font-size: 14px; /* Ajusta el tamaño de la fuente del párrafo en pantallas muy pequeñas */
-  }
-}
-
-
-
-
-
-
-
-
-
-/* esto esta comentado */
-/* Ajusta el ancho y altura del contenedor del slider */
-.swiper-container {
-  width: 100%; /* Ajusta el ancho del contenedor al 100% del contenedor padre */
-  height: auto; /* Ajusta la altura según el contenido */
-  overflow: hidden; /* Evita el desbordamiento del contenido */
-  cursor: url('images/cursor.png'), auto;
-}
-
-/* Ajusta el estilo de las imágenes dentro de los slides */
-.swiper-slide img {
-  width: 120%; /* Aumenta el ancho de la imagen al 120% del slide */
-  height: auto; /* Mantiene la proporción de la imagen */
-  object-fit: cover; /* Asegura que la imagen cubra el área del slide sin distorsionarse */
-  margin-left: -10%; /* Ajusta la posición horizontal para centrar la imagen */
-}
-
-/* Alinea el contenido dentro de los slides */
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120%; /* Asegura que las imágenes ocupen toda la altura del slide */
-}
 
 
 
@@ -224,7 +91,7 @@ header ul li a {
 .video {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: auto; /* Altura inicial */
   overflow: hidden;
 }
 
@@ -232,89 +99,60 @@ header ul li a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 
+
+/* Estilo para la superposición de texto */
 .text-overlay {
   position: absolute;
-  top: 50%; /* Posición vertical centrada */
-  left: 50%; /* Posición horizontal centrada */
-  transform: translate(-50%, -50%); /* Centramos el contenedor de texto */
-  text-align: center; /* Centra el texto dentro del contenedor */
-  width: 100%; /* Asegura que el contenedor de texto ocupe todo el ancho */
-  height: auto; /* Ajusta la altura del contenedor según el contenido */
-}
-
-#another-text {
+  top: 40%;
+  left: 85%;
+  transform: translate(-50%, -50%);
   color: white;
-  opacity: 1; /* Inicialmente visible */
-  animation: fadeOut 1s forwards; /* Aplicar animación de desvanecimiento */
-  animation-delay: 1s; /* Espera 1 segundo antes de iniciar la animación */
-  margin: 0; /* Elimina márgenes para evitar espacios adicionales */
-  font-size: 24px;
+  text-align: center;
+  padding: 60px;
+  border-radius: 10px;
 }
 
-@keyframes fadeOut {
-  from {
-      opacity: 1;
-  }
-  to {
-      opacity: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  #display-time {
-      font-size: 5vw; /* Ajuste para pantallas medianas */
-  }
-
-  #another-text {
-      font-size: 4vw; /* Ajuste para pantallas medianas */
-  }
-}
-
-@media (min-width: 1024px) {
-  #display-time {
-      font-size: 3vw; /* Ajuste para pantallas grandes */
-  }
-
-  #another-text {
-      font-size: 2.5vw; /* Ajuste para pantallas grandes */
-  }
-}
-
-
-
-
-/* Estilo general */
-.parallax-section {
-  background-image: url('images/banner2.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 600px; /* Ajusta la altura según sea necesario */
-  width: 100%;
-  display: flex;
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-}
-
-
-
-.container {
-  max-width: 1200px; /* Ajusta el ancho máximo del contenedor según sea necesario */
-  width: 100%;
-}
-
-.row {
+.text-overlay h1 {
+  
+  font-weight: bold;
   margin: 0;
 }
 
+/* Estilos responsivos */
+@media (max-width: 1024px) {
+  .video {
+    height: 600px; /* Ajusta la altura en pantallas medianas */
+  }
 
-h1, p {
-  margin: 0;
+  .text-overlay h1 {
+    font-size: 2em; /* Ajusta el tamaño de fuente en pantallas medianas */
+  }
 }
+
+@media (max-width: 768px) {
+  .video {
+    height: 400px; /* Ajusta la altura en pantallas pequeñas */
+  }
+
+  .text-overlay h1 {
+    font-size: 1.5em; /* Ajusta el tamaño de fuente en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .video {
+    height: 250px; /* Ajusta la altura en pantallas muy pequeñas */
+  }
+
+  .text-overlay h1 {
+    font-size: 1.2em; /* Ajusta el tamaño de fuente en pantallas muy pequeñas */
+  }
+}
+
 
 
 
@@ -336,7 +174,6 @@ h1, p {
   position: relative;
   overflow: hidden; /* Asegura que el contenido no se salga del contenedor */
   padding: 7px;
-  font-family: CircularStd-Black;
   max-height: 100%; /* Limita la altura del contenedor para controlar el desbordamiento */
 }
 
@@ -415,11 +252,6 @@ h1, p {
 
 
 
-
-
-
-
-
 /* Estilos del pie de página */
 .site-footer {
   background-color: #000;
@@ -427,12 +259,15 @@ h1, p {
   font-size: 15px;
   line-height: 24px;
   color: #737373;
+  /* Ajusta la sombra según tus necesidades */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .site-footer hr {
   border-top-color: #bbb;
   opacity: 0.5;
 }
+
 
 .site-footer hr.small {
   margin: 20px 0;
@@ -654,8 +489,8 @@ h1, p {
 .footer {
   background-color: #f0ebd7;
   padding: 30px 0;
-  /* position: relative;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); */
+   position: relative;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
   width: 100%; /* Asegúrate de que el ancho del footer no exceda el body */
   box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
   overflow: hidden; /* Previene desbordamientos */
@@ -771,7 +606,6 @@ h1, p {
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
     --bg-card:#eff0f0;
@@ -1049,10 +883,11 @@ body {
 
 
 
+
+
 .container-acordeon {
 	display: flex;
 	width: 90vw;
-	overflow: hidden; /* Para evitar que el contenido se salga del contenedor */
 }
 
 .panel {

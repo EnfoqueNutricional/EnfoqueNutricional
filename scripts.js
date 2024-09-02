@@ -62,19 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const headerNav = document.querySelector('.header-nav');
-  
-    if (menuToggle && headerNav) {
-      menuToggle.addEventListener('click', function () {
-        headerNav.classList.toggle('active');
-      });
-    } else {
-      console.error('Elementos no encontrados');
-    }
-  });
-  
 
 
 
@@ -83,9 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-  const $changeTimeMonthly = document.querySelector("#changeTime__monthly");
+// SESION DE ACORDEON
+const $changeTimeMonthly = document.querySelector("#changeTime__monthly");
 const $changeTimeYearly = document.querySelector("#changeTime__yearly");
 
 
