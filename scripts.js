@@ -62,14 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
-
-
 // SESION DE ACORDEON
 const $changeTimeMonthly = document.querySelector("#changeTime__monthly");
 const $changeTimeYearly = document.querySelector("#changeTime__yearly");
@@ -111,5 +103,14 @@ $changeTimeMonthly.addEventListener("click" , () => {
 
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+  var video = document.getElementById("myVideo");
+  if (window.innerWidth <= 480) {
+      video.setAttribute("autoplay", true);
+      video.play();
+  } else {
+      video.removeAttribute("autoplay");
+  }
+});
 
 
